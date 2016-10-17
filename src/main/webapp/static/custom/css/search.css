@@ -1,0 +1,7 @@
+.container-fluid table > thead > tr > th{
+    vertical-align: middle !important;
+}
+
+.container-fluid table > tbody > tr > td{
+    vertical-align: middle !important;
+}

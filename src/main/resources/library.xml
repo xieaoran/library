@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+
+<struts>
+    <package name="library" namespace="/library" extends="struts-default">
+
+        <default-action-ref name="search"/>
+
+        <action name="search" class="com.xieaoran.library.Actions.SearchAction" method="execute">
+            <result>/WEB-INF/library/search.jsp</result>
+        </action>
+
+        <action name="detail" class="com.xieaoran.library.Actions.BookInfoAction" method="execute">
+            <result>/WEB-INF/library/detail.jsp</result>
+        </action>
+
+        <action name="manage" class="com.xieaoran.library.Actions.BookManageAction" method="execute">
+            <result>/WEB-INF/library/manage.jsp</result>
+        </action>
+
+        <action name="editSubmit" class="com.xieaoran.library.Actions.BookManageAction" method="edit">
+            <result>/WEB-INF/library/detail.jsp</result>
+        </action>
+
+        <action name="createSubmit" class="com.xieaoran.library.Actions.BookManageAction" method="create">
+            <result>/WEB-INF/library/detail.jsp</result>
+        </action>
+
+        <action name="delete" class="com.xieaoran.library.Actions.BookInfoAction" method="delete">
+            <result>/WEB-INF/library/detail.jsp</result>
+        </action>
+
+        <action name="deleteSubmit" class="com.xieaoran.library.Actions.BookInfoAction" method="deleteSubmit">
+            <result>/WEB-INF/library/detail.jsp</result>
+        </action>
+
+        <action name="amanage" class="com.xieaoran.library.Actions.AuthorManageAction" method="execute">
+            <result>/WEB-INF/library/amanage.jsp</result>
+        </action>
+
+        <action name="aEditSubmit" class="com.xieaoran.library.Actions.AuthorManageAction" method="edit">
+            <result>/WEB-INF/library/adetail.jsp</result>
+        </action>
+
+        <action name="aCreateSubmit" class="com.xieaoran.library.Actions.AuthorManageAction" method="create">
+            <result>/WEB-INF/library/adetail.jsp</result>
+        </action>
+    </package>
+</struts>
